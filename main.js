@@ -13,7 +13,8 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  // mainWindow.loadFile('index.html')
+  mainWindow.loadURL('http://129.9.2.209:8090/cmp/index.html#/user/login')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

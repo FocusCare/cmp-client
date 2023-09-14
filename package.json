@@ -1,10 +1,27 @@
 {
-  "name": "electron-quick-start",
+  "name": "cmp-client",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "win64": "electron-builder --win --x64",
+    "win32": "electron-builder --win --ia32"
+  },
+  "build": {
+    "appId": "com.xxx.app",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +34,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^25.1.0"
+    "electron": "^22.3.12",
+    "electron-builder": "^23.6.0"
   }
 }
